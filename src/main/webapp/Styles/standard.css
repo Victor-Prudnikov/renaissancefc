@@ -1,0 +1,77 @@
+.divheader {
+	background-image: url("../Images/Header_1920x195.jpg");
+	background-repeat: no-repeat;
+	background-attachment: initial;
+	background-position: center;
+	height: 195px;
+	width: 100%;
+	position: relative;
+}
+.navbar {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+}
+.navbar li{
+	display: inline-block;
+}
+.navbar li a{
+	color: white;
+	text-decoration: none;
+	padding: 12px 16px;
+	background: rgba(0, 0, 0, 0.5);
+	font-size: 18px;
+}
+.navbar li a:hover {
+  background-color: #111;
+}
+.table1 {
+	margin: auto;
+	text-align: center;
+	background-color: white;
+}
+.table1 th, .table1 td{
+	text-align: center;
+	border: 1px solid black;
+}
+h1 {
+	text-align: center;
+}
+td.button {
+	border-style: none;
+}
+.center {
+	text-align: center;
+	
+}
+.divform {
+	margin-left: 45%;
+}
+.body {
+	margin: 0;
+    background-image: url(../Images/Basis_1920x1080.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.navbarindex ul {
+	list-style-type: none;
+}
+.navbarindex li a{
+	color: white;
+	text-decoration: none;
+	padding: 12px 16px;
+	margin: 5px;
+	background: rgba(0, 0, 0, 0.7);
+	font-size: 18px;
+	display: block;
+  	width: 120px;
+}
+.navbarindex li a:hover {
+  background-color: #111;
+}
+h3 {
+	text-align: center;
+	margin: 5%;
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug" strict="true"
+    name="XMLConfigTest" packages="org.apache.logging.log4j.test">
+    <Filter type="ThresholdFilter" level="trace" />
+    
+    <Appenders>
+    	<Console name="STDOUT">
+            <Layout type="PatternLayout" pattern="%m %n" />
+        </Console>
+        <RollingFile name="errors" 
+        	fileName="c:/logs/errors.log" 
+        	filePattern="c:/logs/errors-%d{yyyy-MM-dd}-%i.log">
+        	<LevelRangeFilter minLevel="ERROR" maxLevel="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+        	<PatternLayout>
+                <Pattern>%d %p %c{1} [%t] %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="1 MB" />
+            </Policies>
+        </RollingFile>
+        <RollingFile name="records" 
+        	fileName="c:/logs/records.log" 
+        	filePattern="c:/logs/records-%d{yyyy-MM-dd}-%i.log">
+        	<LevelRangeFilter minLevel="INFO" maxLevel="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+        	<PatternLayout>
+                <Pattern>%d %p %c{1} [%t] %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="1 MB" />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+ 
+    <Loggers>
+        <Logger name="com.learn.epam.victorprudnikov">
+        	<AppenderRef ref="errors" />
+        	<AppenderRef ref="records" />
+        </Logger>
+        <Root level="TRACE">
+            <AppenderRef ref="STDOUT" />
+        </Root>
+    </Loggers>
+ 
+</Configuration>
